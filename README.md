@@ -1,2 +1,0 @@
-# Enterprise-Snippets
-Enterprise Snippets
