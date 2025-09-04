@@ -1,0 +1,17 @@
+/Strings - Place in strings section - copy whichever is approriate for your DD 
+
+string CaseDetails = Refval + " " + SiteAddress;
+string Refval = data.REFVAL;
+string SiteAddress = data.ADDRESS.Replace("\r"," ");
+
+string CaseDetails = Refval + " " + SiteAddress;
+string Refval = data.LUPKEYVAL.REFVAL;
+string SiteAddress = data.LUPKEYVAL.ADDRESS.Replace("\r"," ");
+
+string CaseDetails = Refval + " " + SiteAddress;
+string Refval = data.LUPKEYVAL.LUPKEYVAL.REFVAL;
+string SiteAddress = data.LUPKEYVAL.LUPKEYVAL.ADDRESS.Replace("\r"," ");
+
+
+//Task Title/Hint/Help
+task.TaskTitle = "Consult Yorkshire Water " + CaseDetails;
