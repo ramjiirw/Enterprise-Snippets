@@ -2,7 +2,7 @@
 string TaskTitleText  = "Questionnaire Due AP(E)"; 
 
 //Subject
-string Subject = "Questionnaire Due " + CaseDetails;
+string SubjectText = "Questionnaire Due " + CaseDetails;
 
 //place in strings section - copy whichever is approriate for your DD
 //Main case table
