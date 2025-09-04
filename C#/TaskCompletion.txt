@@ -1,0 +1,13 @@
+//Strings: Task Metadata
+int    TaskDefId      = 3000;   
+
+// TASK COMPLETION - over paste in your task the below coding - now you just change the task number above in the int string
+int iEmail = data.GetSQLValueInt(
+    "SELECT COUNT(*) FROM AETASK s " +
+    "WHERE s.TASKTABLEKEY='" + data.KEYVAL.ToString() + "' " +
+    "AND s.TASKDEFID=" + TaskDefId); // configurable above
+
+if (iEmail < 1)
+    smtp.Send(mailMessage);
+
+return false;
