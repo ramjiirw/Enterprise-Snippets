@@ -1,0 +1,21 @@
+//Place in strings section
+string TaskTitleText  = "Questionnaire Due AP(E)"; 
+
+//place in strings section - copy whichever is approriate for your DD
+//Main case table
+string Refval = data.REFVAL; 
+string SiteAddress = data.ADDRESS.Replace("\r"," "); 
+
+//1 table down
+string Refval = data.LUPKEYVAL.REFVAL;
+string SiteAddress = data.LUPKEYVAL.ADDRESS.Replace("\r"," ");
+
+//2 table down
+string Refval = data.LUPKEYVAL.LUPKEYVAL.REFVAL;
+string SiteAddress = data.LUPKEYVAL.LUPKEYVAL.ADDRESS.Replace("\r"," ");
+
+
+//Place in reporting section
+task.TaskTitle = TaskTitleText;
+task.TaskHint = Refval;
+task.TaskHelp = SiteAddress;
