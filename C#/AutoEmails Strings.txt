@@ -1,0 +1,13 @@
+string TaskTitleText  = "LI Inspection Request Officer LI(E)";
+
+// ===================== 8) TASK COMPLETION / SEND ====================
+task.TaskTitle = TaskTitleText; // Configurable above
+task.TaskHint  = Refval;
+task.TaskHelp  = SiteAddress;
+
+// ===================== 2) DATA PULLS (STRINGS / FIELDS) =============
+// FIELDS
+string Refval       = data.LUPKEYVAL.REFVAL;
+string SiteAddress  = data.LUPKEYVAL.ADDRESS.Replace("\r"," ");
+string CaseDetails  = Refval + " " + SiteAddress;
+
