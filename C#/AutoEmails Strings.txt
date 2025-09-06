@@ -1,8 +1,8 @@
- // ===================== 1) CONFIGURABLE VALUES ========================
+ // ===================== CONFIGURABLE VALUES ========================
 string TaskTitleText  = "LI Inspection Request Officer LI(E)";
 int    TaskDefId      = 3000;
 
-// ===================== 8) TASK COMPLETION / SEND ====================
+// ===================== TASK COMPLETION / SEND ====================
 task.TaskTitle = TaskTitleText; // Configurable above
 task.TaskHint  = Refval;
 task.TaskHelp  = SiteAddress;
@@ -19,7 +19,7 @@ return false;
 
 
 
-// ===================== 2) DATA PULLS (STRINGS / FIELDS) =============
+// ===================== DATA PULLS (STRINGS / FIELDS) =============
 // FIELDS
 string Refval       = data.LUPKEYVAL.REFVAL;
 string SiteAddress  = data.LUPKEYVAL.ADDRESS.Replace("\r"," ");
@@ -28,7 +28,7 @@ string CaseDetails  = Refval + " " + SiteAddress;
 string EmailSubject = "Inspection: " + InspectionType;
 string FromAddress = "enterprise@idoxgroup.com";
 
-// ===================== 6) EMAIL HEADERS =============================
+// ===================== EMAIL HEADERS =============================
 mailMessage.To.Add(CaseOffEmail);  
 mailMessage.Subject = EmailSubject; 
 mailMessage.From = new System.Net.Mail.MailAddress(FromAddress);
