@@ -25,7 +25,7 @@ string Refval       = data.LUPKEYVAL.REFVAL;
 string SiteAddress  = data.LUPKEYVAL.ADDRESS.Replace("\r"," ");
 string CaseDetails  = Refval + " " + SiteAddress;
 
-string EmailSubject = "Inspection: " + InspectionType;
+string SubjectText = "Inspection: " + InspectionType;
 string FromAddress = "enterprise@idoxgroup.com";
 
 // ===================== EMAIL HEADERS =============================
