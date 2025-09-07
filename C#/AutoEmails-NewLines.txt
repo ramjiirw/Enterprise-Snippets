@@ -9,3 +9,8 @@
 
 //4 blank lines 
 "\n\n\n\n"+
+
+
+Comment out block 
+
+/*  */
