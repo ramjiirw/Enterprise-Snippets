@@ -21,7 +21,7 @@ string SiteAddress = data.LUPKEYVAL.LUPKEYVAL.ADDRESS.Replace("\r"," ");
 string CaseDetails = Refval + " " + SiteAddress;
 
 //Email Subject
-mailMessage.Subject = SubjectText;
+mailMessage.Subject = EmailSubject;
 mailMessage.From = new System.Net.Mail.MailAddress(FromAddress);  
 
 //Task Reporting
