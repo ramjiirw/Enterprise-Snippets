@@ -3,7 +3,7 @@ string TaskTitleText  = "LI Inspection Request Officer LI(E)";
 int    TaskDefId      = 3000;
 
 
-//string BCCTesting = "ian.woodland@idoxgroup.com";
+string BCCTesting = "ian.woodland@idoxgroup.com";
 
 // ===================== TASK COMPLETION / SEND ====================
 task.TaskTitle = TaskTitleText; // Configurable above
