@@ -2,8 +2,8 @@
 string TaskTitleText  = "LI Inspection Request Officer LI(E)";
 int    TaskDefId      = 3000;
 
-//string BCC = "ian.woodland@idoxgroup.com";
-//mailMessage.Bcc.Add(BCC);
+
+//string BCCTesting = "ian.woodland@idoxgroup.com";
 
 // ===================== TASK COMPLETION / SEND ====================
 task.TaskTitle = TaskTitleText; // Configurable above
@@ -32,7 +32,8 @@ string SubjectText = "Inspection: " + InspectionType;
 string FromAddress = "enterprise@idoxgroup.com";
 
 // ===================== EMAIL HEADERS =============================
-mailMessage.To.Add(CaseOffEmail);  
+mailMessage.To.Add(CaseOffEmail);
+//mailMessage.Bcc.Add(BCCTesting);
 mailMessage.Subject = EmailSubject; 
 mailMessage.From = new System.Net.Mail.MailAddress(FromAddress);
 mailMessage.Body = emailbody;     
