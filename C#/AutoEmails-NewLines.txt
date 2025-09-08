@@ -1,6 +1,7 @@
 //Next blank line
 
 "\n"+
+"" +
 
 //2 blank lines [most common?]
 
@@ -10,10 +11,12 @@
 //3 blank lines 
 
 "\n\n\n"+
+"" +
 
 //4 blank lines 
 
 "\n\n\n\n"+
+"" +
 
 
 Comment out block 
