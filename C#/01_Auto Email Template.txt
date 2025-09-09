@@ -27,14 +27,14 @@ string ToOfficerEmail = " ";
 //EMAIL BODY
 
 string emailbody = 
-"Dear " + "\n\n\n"+
+"Dear " + "\n\n\n" +
 "Case Reference: " + Refval + "\n\n" +
 "Site Address: " + SiteAddress + "\n\n" +
-"" + "\n\n" +
-"" + "\n\n" +
-"" + "\n\n" + 
-"" + "\n\n\n\n"+
-"Kind Regards" + "\n\n"+
+"\n\n" +
+"\n\n" +
+"\n\n" +
+"\n\n\n\n" +
+"Kind Regards" + "\n\n" +
 EmailBodyFooter;
 
 
