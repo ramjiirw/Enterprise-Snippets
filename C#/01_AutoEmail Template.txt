@@ -1,4 +1,5 @@
 // ===================== CONFIGURABLE VALUES ========================
+
 string TaskTitleText  = "DC Invalid Reasons DC(E)";
 
 int    TaskDefId      = 3000;
