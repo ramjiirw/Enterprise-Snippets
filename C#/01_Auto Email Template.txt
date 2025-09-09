@@ -26,7 +26,8 @@ string ToOfficerEmail = " ";
 
 //EMAIL BODY
 
-string emailbody = "Dear " + 
+string emailbody = 
+"Dear " + 
 "\n\n\n"+
 "Case Reference: " + Refval +
 "\n\n"+
