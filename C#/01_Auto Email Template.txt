@@ -1,6 +1,6 @@
 // ===================== CONFIGURABLE VALUES ========================
 
-string TaskTitleText  = "Title of auto email here DC/BC/LI/EN/AP(E)";  
+string TaskTitleText  = "Title of auto email task here DC/BC/LI/EN/AP(E)";  
 
 int    TaskDefId      = 3000;
 
