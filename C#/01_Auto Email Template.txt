@@ -28,14 +28,15 @@ string ToOfficerEmail = " ";
 
 string emailbody = 
 "Dear " + "\n\n\n"+
-"Case Reference: " + Refval + "\n\n"+
-"Site Address: " + SiteAddress + "\n\n"+
+"Case Reference: " + Refval + "\n\n" +
+"Site Address: " + SiteAddress + "\n\n" +
 "" + "\n\n" +
 "" + "\n\n" +
 "" + "\n\n" + 
 "" + "\n\n\n\n"+
 "Kind Regards" + "\n\n"+
 EmailBodyFooter;
+
 
 
 // ===================== EMAIL COMMAND DO NOT TOUCH START ===========================
