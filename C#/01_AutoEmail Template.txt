@@ -17,6 +17,8 @@ string EmailFromAddress = "enterprise@idoxgroup.com";
 String ToName = " ";
 string ToEmail = " ";
 
+string ToOfficerName = " ";
+string ToOfficerEmail = " ";
 
 
 
@@ -25,6 +27,10 @@ string ToEmail = " ";
 
 string emailbody = "Dear " + 
 "\n\n\n"+
+"Case Reference: " + Refval +
+"\n\n"+
+"Site Address: " + SiteAddress
+"\n\n"+
 "" +
 "\n\n"+
 "" +
