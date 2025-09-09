@@ -67,23 +67,24 @@ smtp.Port = Plantech.Apps.Core.LibCore.RipOptions.Email.ucRipOptionPageEmailSmtp
 //mailMessage.Bcc.Add("enterprise@idoxgroup.com");
 
 //DO NOT TOUCH
-mailMessage.Subject = EmailSubjectText;
-mailMessage.From = new System.Net.Mail.MailAddress(EmailFromAddress); 
+mailMessage.Subject = EmailSubjectText;  // Configurable above
+mailMessage.From = new System.Net.Mail.MailAddress(EmailFromAddress);  // Configurable above
 mailMessage.Body = emailbody;
 
 
 
 // ===================== TASK COMPLETION / SEND - DO NOT TOUCH ====================
 
+//Reporting
 task.TaskTitle = TaskTitleText; // Configurable above
 task.TaskHint  = Refval;
 task.TaskHelp  = SiteAddress;
 
-
+//Task Completion 
 int iEmail = data.GetSQLValueInt(
     "SELECT COUNT(*) FROM AETASK s " +
     "WHERE s.TASKTABLEKEY='" + data.KEYVAL.ToString() + "' " +
-    "AND s.TASKDEFID=" + TaskDefId);
+    "AND s.TASKDEFID=" + TaskDefId);  // Configurable above
 
 if (iEmail < 1)
     smtp.Send(mailMessage);
