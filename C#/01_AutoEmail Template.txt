@@ -4,7 +4,7 @@ string TaskTitleText  = "DC Invalid Reasons DC(E)";
 
 int    TaskDefId      = 3000;
 
-tring Refval = data.REFVAL; 
+string Refval = data.REFVAL; 
 string SiteAddress = data.ADDRESS.Replace("\r"," ");
 string CaseDetails = Refval + " " + SiteAddress;
 
