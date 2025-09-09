@@ -61,6 +61,8 @@ smtp.Port = Plantech.Apps.Core.LibCore.RipOptions.Email.ucRipOptionPageEmailSmtp
 mailMessage.Subject = EmailSubjectText;  // Configurable above
 mailMessage.From = new System.Net.Mail.MailAddress(EmailFromAddress);  // Configurable above
 mailMessage.Body = emailbody;
+mailMessage.IsBodyHtml = false;
+
 
 
 
