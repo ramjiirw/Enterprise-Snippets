@@ -1,5 +1,3 @@
-/Strings - Place in strings section - copy whichever is approriate for your DD 
-
 string Refval = data.REFVAL;
 string SiteAddress = data.ADDRESS.Replace("\r"," ");
 string CaseDetails = Refval + " " + SiteAddress;
