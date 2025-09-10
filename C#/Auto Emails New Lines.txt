@@ -1,19 +1,14 @@
-//Next blank line
-
-"\n"+
-"" +
-
-//2 blank lines [most common?]
+//1 blank lines [most common?]
 
 "\n\n"+
 "" +
 
-//3 blank lines 
+//2 blank lines 
 
 "\n\n\n"+
 "" +
 
-//4 blank lines 
+//3 blank lines 
 
 "\n\n\n\n"+
 "" +
