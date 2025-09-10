@@ -29,16 +29,15 @@ string ToOfficerEmail = " ";
 
 //EMAIL BODY
 
-string emailbody = 
-"Dear " + "\n\n\n" + 
-"Case Reference: " + Refval + "\n\n" + 
-"Site Address: " + SiteAddress + "\n\n\n" + 
-"\n\n" + 
-"\n\n" + 
-"\n\n" + 
-"\n\n\n\n"+
-"Kind Regards" + "\n\n" + 
-EmailBodyFooter;
+string emailbody =
+"<p>Dear</p>" +
+"<p>Case Reference: " + Refval + "</p>" +
+"<p>Site Address: " + SiteAddress + "</p>" +
+"<p></p>" +   // blank line
+"<p></p>" +   // blank line
+"<p></p>" +   // blank line
+"<p>Kind Regards</p>" +
+"<p>" + EmailBodyFooter + "</p>";
 
 
 
