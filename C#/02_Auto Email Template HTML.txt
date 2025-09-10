@@ -1,0 +1,88 @@
+//Sam - ignore - in progress
+
+
+// ===================== CONFIGURABLE VALUES ========================
+
+string TaskTitleText  = "Title of auto email task here DC/BC/LI/EN/AP(E)";  
+
+int    TaskDefId      = 3000;
+
+string Refval = data.REFVAL; 
+string SiteAddress = data.ADDRESS.Replace("\r"," ");
+string CaseDetails = Refval + " " + SiteAddress;
+
+string EmailBodyFooter = "Edgehill Council Planning";
+string EmailSubjectText = "Add text here " + CaseDetails;
+string EmailFromAddress = "enterprise@idoxgroup.com";
+
+
+//Field Strings
+
+String ToName = " ";
+string ToEmail = " ";
+
+string ToOfficerName = " ";
+string ToOfficerEmail = " ";
+
+
+
+
+//EMAIL BODY
+
+string emailbody = 
+"Dear " + "\n\n\n" + 
+"Case Reference: " + Refval + "\n\n" + 
+"Site Address: " + SiteAddress + "\n\n\n" + 
+"\n\n" + 
+"\n\n" + 
+"\n\n" + 
+"\n\n\n\n"+
+"Kind Regards" + "\n\n" + 
+EmailBodyFooter;
+
+
+
+// ===================== EMAIL COMMAND DO NOT TOUCH START ===========================
+
+//This section relates to the SMTP setting in the Workflow set up - add the server details
+System.Net.Mail.SmtpClient smtp = new 
+                System.Net.Mail.SmtpClient(Plantech.Apps.Core.LibCore.RipOptions.Email.ucRipOptionPageEmailSmtp.SMTPServer);
+System.Net.Mail.MailMessage mailMessage = new System.Net.Mail.MailMessage();    
+mailMessage.Priority = System.Net.Mail.MailPriority.High;
+smtp.Port = Plantech.Apps.Core.LibCore.RipOptions.Email.ucRipOptionPageEmailSmtp.SMTPPort;
+
+// ===================== EMAIL COMMAND DO NOT TOUCH END =========================
+
+
+// ===================== EMAIL HEADERS =============================
+
+//mailMessage.To.Add(ToEmail);
+//mailMessage.CC.Add("enterprise@idoxgroup.com");
+//mailMessage.Bcc.Add("enterprise@idoxgroup.com");
+
+//DO NOT TOUCH
+mailMessage.Subject = EmailSubjectText;  // Configurable above
+mailMessage.From = new System.Net.Mail.MailAddress(EmailFromAddress);  // Configurable above
+mailMessage.Body = emailbody;
+mailMessage.IsBodyHtml = true;
+
+
+
+
+// ===================== TASK COMPLETION / SEND - DO NOT TOUCH ====================
+
+//Reporting
+task.TaskTitle = TaskTitleText; // Configurable above
+task.TaskHint  = Refval;
+task.TaskHelp  = SiteAddress;
+
+//Task Completion 
+int iEmail = data.GetSQLValueInt(
+    "SELECT COUNT(*) FROM AETASK s " +
+    "WHERE s.TASKTABLEKEY='" + data.KEYVAL.ToString() + "' " +
+    "AND s.TASKDEFID=" + TaskDefId);  // Configurable above
+
+if (iEmail < 1)
+    smtp.Send(mailMessage);
+
+return false;
