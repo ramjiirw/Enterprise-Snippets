@@ -1,5 +1,3 @@
-//Sam - ignore - in progress
-
 
 // ===================== CONFIGURABLE VALUES ========================
 
