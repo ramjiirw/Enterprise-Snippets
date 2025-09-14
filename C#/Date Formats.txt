@@ -5,7 +5,7 @@ string DateName  = data.RECOMDATE.ToString("dd/MM/yyyy"); //01/01/24
 
 //1 Table Down
 string DateName = data.LUPKEYVAL.RECOMDATE.ToString("d MMMM yyyy"); //1 January 2024
-string DDateName te = data.LUPKEYVAL.RECOMDATE.ToString("ddd d MMMM yyyy"); //Monday 1 January 2024
+string DateName = data.LUPKEYVAL.RECOMDATE.ToString("ddd d MMMM yyyy"); //Monday 1 January 2024
 string DateName = data.LUPKEYVAL.RECOMDATE.ToString("dd/MM/yyyy"); //01/01/24
 
 //2 Table Down
