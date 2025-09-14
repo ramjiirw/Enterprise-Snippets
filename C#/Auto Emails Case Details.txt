@@ -3,12 +3,12 @@ string Refval = data.REFVAL;
 string SiteAddress = data.ADDRESS.Replace("\r"," ");
 string CaseDetails = Refval + " " + SiteAddress;
 
-//1 table down
+//1 table down - Full Address
 string Refval = data.LUPKEYVAL.REFVAL;
 string SiteAddress = data.LUPKEYVAL.ADDRESS.Replace("\r"," ");
 string CaseDetails = Refval + " " + SiteAddress;
 
-//2 table down
+//2 table down - Full Address
 string Refval = data.LUPKEYVAL.LUPKEYVAL.REFVAL;
 string SiteAddress = data.LUPKEYVAL.LUPKEYVAL.ADDRESS.Replace("\r"," ");
 string CaseDetails = Refval + " " + SiteAddress;
@@ -19,12 +19,12 @@ string Refval = data.REFVAL;
 string SiteAddress = data.GetFirstLine("ADDRESS");
 string CaseDetails = Refval + " " + SiteAddress;
 
-//1 table down
+//1 table down - First Line Address
 string Refval = data.LUPKEYVAL.REFVAL;
 string SiteAddress = data.LUPKEYVAL.GetFirstLine("ADDRESS");
 string CaseDetails = Refval + " " + SiteAddress;
 
-//2 table down
+//2 table down - First Line Address
 string Refval = data.LUPKEYVAL.LUPKEYVAL.REFVAL;
 string SiteAddress = data.LUPKEYVAL.LUPKEYVAL.GetFirstLine("ADDRESS");
 string CaseDetails = Refval + " " + SiteAddress;
