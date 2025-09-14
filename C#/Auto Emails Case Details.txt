@@ -1,4 +1,4 @@
-//Main case table
+//Main case table - Full Address
 string Refval = data.REFVAL; 
 string SiteAddress = data.ADDRESS.Replace("\r"," ");
 string CaseDetails = Refval + " " + SiteAddress;
@@ -14,7 +14,7 @@ string SiteAddress = data.LUPKEYVAL.LUPKEYVAL.ADDRESS.Replace("\r"," ");
 string CaseDetails = Refval + " " + SiteAddress;
 
 
-//Main case table first line address
+//Main case table - First Line Address
 string Refval = data.REFVAL; 
 string SiteAddress = data.GetFirstLine("ADDRESS");
 string CaseDetails = Refval + " " + SiteAddress;
